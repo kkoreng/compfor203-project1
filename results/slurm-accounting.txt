@@ -1,0 +1,5 @@
+JobID           JobName      State    Elapsed     MaxRSS  AllocCPUS 
+------------ ---------- ---------- ---------- ---------- ---------- 
+65599332     compfor20+  COMPLETED   00:00:03                     1 
+65599332.ba+      batch  COMPLETED   00:00:03     94756K          1 
+65599332.ex+     extern  COMPLETED   00:00:03                     1 
