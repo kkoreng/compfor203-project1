@@ -2,50 +2,28 @@
 
 ## Overview
 
-This project compares the execution time of a Python loop and NumPy vectorization for calculating the sum of squares.
-
-The program runs on the Great Lakes HPC cluster using SLURM.
-
-## Environment
-
-Python 3.12, NumPy, and pytest are managed using Mamba and `environment.yml`.
+This project compares the speed of a Python loop and NumPy when calculating the sum of squares.
 
 ## How to Run
 
-Create the environment:
+Create the mamba environment using environment.yml
 
-```bash
-mamba env create -f environment.yml
-mamba activate compfor203-project1
-```
+Run tests with python -m pytest
 
-Run tests:
+Run the program with python main.py
 
-```bash
-python -m pytest
-```
+On Great Lakes, configure the mamba environment in run_job.sh
 
-Run the benchmark:
-
-```bash
-python main.py
-```
-
-On Great Lakes, after setting up the Mamba environment specified in `run_job.sh`:
-
-```bash
-sbatch run_job.sh
-```
-
-## Testing
-
-- 13 pytest tests passed on Great Lakes.
-- GitHub Actions is configured to run tests on push and pull requests.
+Submit the job using sbatch run_job.sh
 
 ## Results
 
-The benchmark results are saved in `results/benchmark.csv`.
+NumPy was about 5–40 times faster than the Python loop, depending on the input size.
 
-NumPy was faster than the Python loop for all tested input sizes.
+Results are saved in `results/benchmark.csv`.
 
-**Great Lakes SLURM Job ID:** 65599332
+SLURM Job ID: `65599332`
+
+## AI Assistance
+
+ChatGPT was used to assist with writing Python code, troubleshooting errors, and checking project progress.
