@@ -1,0 +1,43 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.16, pytest-9.2.0, pluggy-1.7.0 -- /home/heeryunc/mamba-envs/compfor203-project1-v2/bin/python
+cachedir: .pytest_cache
+rootdir: /home/heeryunc/project-1
+configfile: pyproject.toml
+testpaths: tests
+collecting ... collected 13 items
+
+tests/test_calculation.py::test_known_answers[0-0] PASSED                [  7%]
+tests/test_calculation.py::test_known_answers[1-1] PASSED                [ 15%]
+tests/test_calculation.py::test_known_answers[3-14] PASSED               [ 23%]
+tests/test_calculation.py::test_known_answers[5-55] PASSED               [ 30%]
+tests/test_calculation.py::test_known_answers[10-385] PASSED             [ 38%]
+tests/test_calculation.py::test_same_results[0] PASSED                   [ 46%]
+tests/test_calculation.py::test_same_results[1] PASSED                   [ 53%]
+tests/test_calculation.py::test_same_results[10] PASSED                  [ 61%]
+tests/test_calculation.py::test_same_results[100] PASSED                 [ 69%]
+tests/test_calculation.py::test_same_results[1000] PASSED                [ 76%]
+tests/test_calculation.py::test_negative_input[-1] PASSED                [ 84%]
+tests/test_calculation.py::test_negative_input[-5] PASSED                [ 92%]
+tests/test_calculation.py::test_negative_input[-100] PASSED              [100%]
+
+============================== 13 passed in 0.38s ==============================
+n = 1000
+  Loop:  0.000050 seconds
+  NumPy: 0.000005 seconds
+  Speedup: 9.77x
+
+n = 10000
+  Loop:  0.000511 seconds
+  NumPy: 0.000013 seconds
+  Speedup: 39.93x
+
+n = 100000
+  Loop:  0.005237 seconds
+  NumPy: 0.000745 seconds
+  Speedup: 7.03x
+
+n = 1000000
+  Loop:  0.052862 seconds
+  NumPy: 0.009895 seconds
+  Speedup: 5.34x
+
